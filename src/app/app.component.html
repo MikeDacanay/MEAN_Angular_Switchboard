@@ -1,9 +1,15 @@
 <h1> {{title}}</h1>
-<div [ngClass]={}>
+<div (click)="flip('flip1')" [ngClass]="{'on':switch1===true, 'off':switch1===false }">
+    <h2 *ngIf="switch1"> On </h2>
+    <h2 *ngIf="!switch1"> Off </h2>
 </div>
-<div>
+<div (click)="flip('flip2')" [ngClass]="{'on':switch2===true, 'off':switch2===false }">
+    <h2 *ngIf="switch2"> On </h2>
+    <h2 *ngIf="!switch2"> Off </h2>
 </div>
-<div>
+<div (click)="flip('flip3')" [ngClass]="{'on':switch3===true, 'off':switch3===false }">
+    <h2 *ngIf="switch3"> On </h2>
+    <h2 *ngIf="!switch3"> Off </h2>
 </div>
-<div>
-</div>
+
+

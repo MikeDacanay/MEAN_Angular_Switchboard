@@ -8,5 +8,19 @@ import { Component } from '@angular/core';
 export class AppComponent {
 	title = 'Switchboard';
 	
-	//ON is Green OFF is Blue
+	switch1: Boolean = true ;
+	switch2: Boolean = true ;
+	switch3: Boolean = true ;
+
+	flip(val: String) {
+		if (val==='flip1'){
+			this.switch1=!this.switch1;
+		}
+		if (val==='flip2'){
+			this.switch2=!this.switch2;
+		}
+		if (val==='flip3'){
+			this.switch3=!this.switch3;
+		}				
+	}
 }
